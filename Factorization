@@ -1,0 +1,22 @@
+import hsa.*;
+public class Factorization
+{
+    public static void main (String[] args)
+    {
+        Console c = new Console ();
+        while (true)
+        {
+            double x = c.readDouble ();
+            for (int i = 1 ; i <= Math.sqrt (x) ; i++)
+            {
+                if (x % i == 0)
+                {
+                    c.print ((int) i);
+                    c.print ("\t");
+                    c.println ((int) (x / i));
+                }
+            }
+            c.println ("----------------------------------------------");
+        }
+    }
+}
